@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<IamManish_ShipmentFilter>
+			<version>0.1.0</version>
+		</IamManish_ShipmentFilter>
+	</modules>
+	<global>
+		<helpers>
+			<shipmentfilter>
+				<class>IamManish_ShipmentFilter_Helper</class>
+			</shipmentfilter>
+		</helpers>
+		<models>
+			<shipmentfilter>
+				<class>IamManish_ShipmentFilter_Model</class>
+				<resourceModel>shipmentfilter_mysql4</resourceModel>
+			</shipmentfilter>
+		</models>
+		<events>
+			<sales_quote_collect_totals_before> <!-- identifier of the event we want to catch -->
+				<observers>
+					<sales_quote_collect_totals_before_handler> <!-- identifier of the event handler -->
+						<type>model</type> <!-- class method call type; valid are model, object and singleton -->
+						<class>shipmentfilter/observer</class> <!-- observers class alias -->
+						<method>salesQuoteCollectTotalsBefore</method>  <!-- observer's method to be called -->
+						<args></args> <!-- additional arguments passed to observer -->
+					</sales_quote_collect_totals_before_handler>
+				</observers>
+			</sales_quote_collect_totals_before>
+		</events>
+	</global>
+</config> 
