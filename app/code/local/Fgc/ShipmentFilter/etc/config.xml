@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <config>
 	<modules>
-		<IamManish_ShipmentFilter>
+		<Fgc_ShipmentFilter>
 			<version>0.1.0</version>
-		</IamManish_ShipmentFilter>
+		</Fgc_ShipmentFilter>
 	</modules>
 	<global>
 		<helpers>
 			<shipmentfilter>
-				<class>IamManish_ShipmentFilter_Helper</class>
+				<class>Fgc_ShipmentFilter_Helper</class>
 			</shipmentfilter>
 		</helpers>
 		<models>
 			<shipmentfilter>
-				<class>IamManish_ShipmentFilter_Model</class>
+				<class>Fgc_ShipmentFilter_Model</class>
 				<resourceModel>shipmentfilter_mysql4</resourceModel>
 			</shipmentfilter>
 		</models>
@@ -30,4 +30,4 @@
 			</sales_quote_collect_totals_before>
 		</events>
 	</global>
-</config> 
+</config>
