@@ -21,7 +21,5 @@ class Fgc_ShipmentFilter_Model_Observer {
 				// $store->setConfig("carriers/{$carrierCode}/price", $newPrice);
 			//}
 		}
-
-		$_shippingRateGroups = $address->getEstimateRates();
 	}
 }
