@@ -10,8 +10,7 @@ class Fgc_ShipmentFilter_Model_Observer {
 
 		$quote = Mage::getModel("checkout/session")->getQuote();
 		$amount = $quote->getShippingAddress()->getShippingAmount();
-
-		$newPrice = $amount + ($amount * 10 / 100);
+		// $newPrice = $amount + ($amount * 10 / 100);
 		$store = Mage::app()->getStore($quote->getStoreId());
 		$carriers = Mage::getStoreConfig('carriers', $store);
 		foreach ($carriers as $carrierCode => $carrierConfig) {
