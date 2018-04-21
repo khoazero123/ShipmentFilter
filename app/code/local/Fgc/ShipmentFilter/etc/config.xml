@@ -29,5 +29,12 @@
 				</observers>
 			</sales_quote_collect_totals_before>
 		</events>
+		<blocks>
+            <customer>
+                <rewrite>
+                    <account_navigation>Fgc_ShipmentFilter_Block_Account_Navigation</account_navigation>
+                </rewrite>
+            </customer>
+        </blocks>
 	</global>
 </config>
